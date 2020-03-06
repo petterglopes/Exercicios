@@ -1,0 +1,300 @@
+Número da seção: 0
+Número do candidato: 176
+
+Número da seção: 0
+Número do candidato: 123
+
+Número da seção: 0
+Número do candidato: 200
+
+Número da seção: 0
+Número do candidato: 174
+
+Número da seção: 0
+Número do candidato: 284
+
+Número da seção: 0
+Número do candidato: 113
+
+Número da seção: 0
+Número do candidato: 239
+
+Número da seção: 1
+Número do candidato: 75
+
+Número da seção: 1
+Número do candidato: 132
+
+Número da seção: 1
+Número do candidato: 234
+
+Número da seção: 1
+Número do candidato: 142
+
+Número da seção: 1
+Número do candidato: 30
+
+Número da seção: 1
+Número do candidato: 148
+
+Número da seção: 1
+Número do candidato: 10
+
+Número da seção: 1
+Número do candidato: 210
+
+Número da seção: 1
+Número do candidato: 162
+
+Número da seção: 1
+Número do candidato: 136
+
+Número da seção: 1
+Número do candidato: 221
+
+Número da seção: 1
+Número do candidato: 231
+
+Número da seção: 2
+Número do candidato: 240
+
+Número da seção: 2
+Número do candidato: 101
+
+Número da seção: 2
+Número do candidato: 174
+
+Número da seção: 2
+Número do candidato: 7
+
+Número da seção: 2
+Número do candidato: 6
+
+Número da seção: 2
+Número do candidato: 38
+
+Número da seção: 2
+Número do candidato: 150
+
+Número da seção: 3
+Número do candidato: 296
+
+Número da seção: 3
+Número do candidato: 229
+
+Número da seção: 3
+Número do candidato: 206
+
+Número da seção: 3
+Número do candidato: 207
+
+Número da seção: 3
+Número do candidato: 271
+
+Número da seção: 3
+Número do candidato: 245
+
+Número da seção: 3
+Número do candidato: 197
+
+Número da seção: 3
+Número do candidato: 195
+
+Número da seção: 3
+Número do candidato: 159
+
+Número da seção: 4
+Número do candidato: 236
+
+Número da seção: 4
+Número do candidato: 247
+
+Número da seção: 4
+Número do candidato: 73
+
+Número da seção: 4
+Número do candidato: 251
+
+Número da seção: 4
+Número do candidato: 44
+
+Número da seção: 4
+Número do candidato: 4
+
+Número da seção: 4
+Número do candidato: 127
+
+Número da seção: 5
+Número do candidato: 233
+
+Número da seção: 5
+Número do candidato: 259
+
+Número da seção: 5
+Número do candidato: 260
+
+Número da seção: 5
+Número do candidato: 162
+
+Número da seção: 5
+Número do candidato: 90
+
+Número da seção: 5
+Número do candidato: 63
+
+Número da seção: 6
+Número do candidato: 297
+
+Número da seção: 6
+Número do candidato: 48
+
+Número da seção: 6
+Número do candidato: 26
+
+Número da seção: 6
+Número do candidato: 174
+
+Número da seção: 6
+Número do candidato: 126
+
+Número da seção: 6
+Número do candidato: 161
+
+Número da seção: 6
+Número do candidato: 74
+
+Número da seção: 6
+Número do candidato: 262
+
+Número da seção: 6
+Número do candidato: 37
+
+Número da seção: 6
+Número do candidato: 285
+
+Número da seção: 6
+Número do candidato: 123
+
+Número da seção: 6
+Número do candidato: 113
+
+Número da seção: 6
+Número do candidato: 193
+
+Número da seção: 6
+Número do candidato: 9
+
+Número da seção: 6
+Número do candidato: 37
+
+Número da seção: 7
+Número do candidato: 72
+
+Número da seção: 7
+Número do candidato: 116
+
+Número da seção: 7
+Número do candidato: 248
+
+Número da seção: 7
+Número do candidato: 119
+
+Número da seção: 7
+Número do candidato: 176
+
+Número da seção: 7
+Número do candidato: 240
+
+Número da seção: 7
+Número do candidato: 275
+
+Número da seção: 7
+Número do candidato: 247
+
+Número da seção: 7
+Número do candidato: 51
+
+Número da seção: 7
+Número do candidato: 202
+
+Número da seção: 8
+Número do candidato: 41
+
+Número da seção: 8
+Número do candidato: 204
+
+Número da seção: 8
+Número do candidato: 39
+
+Número da seção: 8
+Número do candidato: 215
+
+Número da seção: 8
+Número do candidato: 0
+
+Número da seção: 8
+Número do candidato: 251
+
+Número da seção: 8
+Número do candidato: 78
+
+Número da seção: 8
+Número do candidato: 61
+
+Número da seção: 9
+Número do candidato: 160
+
+Número da seção: 9
+Número do candidato: 41
+
+Número da seção: 9
+Número do candidato: 135
+
+Número da seção: 9
+Número do candidato: 256
+
+Número da seção: 9
+Número do candidato: 214
+
+Número da seção: 9
+Número do candidato: 95
+
+Número da seção: 9
+Número do candidato: 56
+
+Número da seção: 9
+Número do candidato: 268
+
+Número da seção: 9
+Número do candidato: 117
+
+Número da seção: 10
+Número do candidato: 180
+
+Número da seção: 10
+Número do candidato: 64
+
+Número da seção: 10
+Número do candidato: 7
+
+Número da seção: 10
+Número do candidato: 18
+
+Número da seção: 10
+Número do candidato: 60
+
+Número da seção: 10
+Número do candidato: 17
+
+Número da seção: 10
+Número do candidato: 133
+
+Número da seção: 10
+Número do candidato: 78
+
+Número da seção: 10
+Número do candidato: 172
+
+Número da seção: 10
+Número do candidato: 47
+

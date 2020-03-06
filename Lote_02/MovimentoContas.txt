@@ -1,0 +1,50 @@
+Código da conta: 1158
+Valor do movimento: R$ 5.238,91
+Tipo de movimento: 1
+Status do movimento: 2
+
+Código da conta: 1158
+Valor do movimento: R$ 1.415,17
+Tipo de movimento: 1
+Status do movimento: 1
+
+Código da conta: 1885
+Valor do movimento: R$ 7.605,88
+Tipo de movimento: 2
+Status do movimento: 1
+
+Código da conta: 1885
+Valor do movimento: R$ 2.908,61
+Tipo de movimento: 2
+Status do movimento: 2
+
+Código da conta: 1916
+Valor do movimento: R$ 7.640,24
+Tipo de movimento: 2
+Status do movimento: 2
+
+Código da conta: 1916
+Valor do movimento: R$ 8.574,16
+Tipo de movimento: 2
+Status do movimento: 2
+
+Código da conta: 10150
+Valor do movimento: R$ 1.908,08
+Tipo de movimento: 1
+Status do movimento: 2
+
+Código da conta: 10150
+Valor do movimento: R$ 9.052,85
+Tipo de movimento: 1
+Status do movimento: 1
+
+Código da conta: 10152
+Valor do movimento: R$ 3.459,92
+Tipo de movimento: 1
+Status do movimento: 1
+
+Código da conta: 10152
+Valor do movimento: R$ 8.498,23
+Tipo de movimento: 1
+Status do movimento: 1
+

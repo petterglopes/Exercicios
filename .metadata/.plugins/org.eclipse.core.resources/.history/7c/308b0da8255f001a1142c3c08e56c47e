@@ -1,0 +1,25 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class ListaFuncionario {
+
+	public static void main(String[] args) {
+		Queue<Funcionario> lista_funcionario = new LinkedList<>();
+		
+		Funcionario f1 = new Funcionario("Petter");
+		Funcionario f2 = new Funcionario("Petter");
+		Funcionario f3 = new Funcionario("Petter");
+		Funcionario f4 = new Funcionario("Petter");
+
+		
+		
+		lista_funcionario.
+		
+		System.out.println("Fila: ");
+		for(int i = 0; i<ListaDeFuncionario.size(); i++) {
+			
+		}
+
+	}
+
+}

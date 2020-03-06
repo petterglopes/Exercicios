@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;RemoteSystemsTempFiles&apos;" deleteContents="false" description="Delete resource &apos;RemoteSystemsTempFiles&apos;" element1="/RemoteSystemsTempFiles" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1579403035813"/>&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/Curso-Java-parte-1-Primeiros-passos-capitulo7" element2="/Curso-Java-parte-2-Introdu-o-Orienta-o-a-Objetos-capitulo6" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1579403047147"/>
+</session>

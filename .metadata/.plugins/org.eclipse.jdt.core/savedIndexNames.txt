@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+D:\Petter\OneDrive\OneDrive - Fatec Centro Paula Souza\Eclipse\.metadata\.plugins\org.eclipse.jdt.core
+4288941752.index
+826628092.index
