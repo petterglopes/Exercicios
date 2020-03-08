@@ -19,7 +19,7 @@ public class ListaFuncionario {
 		
 		System.out.println("Fila: ");
 		for(int i = 0; i<fila_funcionario.size(); i++) {
-			
+			System.out.println(fila_funcionario);
 		}
 
 	}
