@@ -9,8 +9,7 @@ public class Principal {
 		//int operacao = 2;
 		
 		for(int operacao = 0; operacao < 4; operacao++) {
-		   Thread tcc = new CalcController(a, b, operacao);
-		   tcc.start();
+		   new CalcController(a, b, operacao).start();
 		}
 	}
 
