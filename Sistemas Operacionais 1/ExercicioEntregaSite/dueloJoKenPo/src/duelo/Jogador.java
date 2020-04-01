@@ -26,17 +26,19 @@ public class Jogador{
 
 	public void setPontos() {
 		this.pontos ++;
-		time.setPontos();
+		if(this.pontos == 3) {
+			time.setPontos();
+		}
 	}
 	
-	public synchronized void jogada() {
+	public void jogada() {
 		int aleatorio = (int)(Math.random() * 3);
 		if(aleatorio == 0) {
-			this.jogada = "Pedra";
+			this.jogada = "pedra";
 		}else if(aleatorio == 1) {
-			this.jogada = "Papel";
+			this.jogada = "papel";
 		}else{
-			this.jogada = "Tesoura";
+			this.jogada = "tesoura";
 		}
 			
 	}

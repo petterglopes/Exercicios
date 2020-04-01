@@ -2,9 +2,8 @@ package duelo;
 
 public class Time {
 	
-	Partida partida;
 	private String nome;
-	private static int pontos = 0;
+	private int pontos = 0;
 	
 	public Time(String nome) {
 		this.nome = nome;
@@ -18,8 +17,11 @@ public class Time {
 		return pontos;
 	}
 
-	public synchronized void setPontos() {
-		pontos ++;
+	public void setPontos() {
+		this.pontos ++;
+		if(this.pontos >= 3) {
+			System.out.println("O " + this.nome + "venceu o duelo.");
+		}
 	}
 
 }
