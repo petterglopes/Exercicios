@@ -1,4 +1,4 @@
-package dueloJoKenPo2;
+package dueloJoKenPo;
 
 public class Jogador {
 	private int pontos = 0;

@@ -1,4 +1,4 @@
-package dueloJoKenPo2;
+package dueloJoKenPo;
 
 public class Duelo implements Runnable{
 	private Time timeA;
