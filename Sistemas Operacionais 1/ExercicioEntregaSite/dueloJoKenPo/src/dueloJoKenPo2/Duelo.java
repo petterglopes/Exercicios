@@ -4,11 +4,13 @@ public class Duelo implements Runnable{
 	private Time timeA;
 	private Time timeB;
 	private int indiceJogador;
+	private Juiz juiz;
 
-	public Duelo(Time timeA, Time timeB, int i) {
+	public Duelo(Time timeA, Time timeB, int i, Juiz juiz) {
 		this.timeA = timeA;
 		this.timeB = timeB;
 		this.indiceJogador = i;
+		this.juiz = juiz;
 	}
 
 	@Override
@@ -26,21 +28,11 @@ public class Duelo implements Runnable{
 						
 			if(!jogadaA.equals(jogadaB)) {
 				if((jogadaA + jogadaB).matches("pedratesoura") || (jogadaA + jogadaB).matches("tesourapapel") || (jogadaA + jogadaB).matches("papelpedra")) {
-					timeA.getJogador(indiceJogador).setPontos();
-					System.out.println(timeA.getJogador(indiceJogador).getNome() + " " + timeA.getNome() + " fez " + timeA.getJogador(indiceJogador).getPontos() + " pontos.");
+					juiz.verifica(timeA, timeA.getJogador(indiceJogador), Thread.currentThread());
 					cont++;
-					if(timeA.getJogador(indiceJogador).getPontos() == 3) {
-						timeA.setPontos();
-						System.out.println(timeA.getNome() + " fez " + timeA.getPontos() + " pontos.");
-					}
 				}else {
-					timeB.getJogador(indiceJogador).setPontos();
-					System.out.println(timeB.getJogador(indiceJogador).getNome() + " " + timeB.getNome() + " fez " + timeB.getJogador(indiceJogador).getPontos() + " pontos.");
+					juiz.verifica(timeB, timeB.getJogador(indiceJogador), Thread.currentThread());
 					cont++;
-					if(timeB.getJogador(indiceJogador).getPontos() == 3) {
-						timeB.setPontos();
-						System.out.println(timeB.getNome() + " fez " + timeB.getPontos() + " pontos.");
-					}
 				}
 			}
 			try {
@@ -48,7 +40,7 @@ public class Duelo implements Runnable{
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}while((timeA.getPontos() < 3 && timeB.getPontos() < 3) || cont < 5);
+		}while(timeA.getPontos() < 3 && timeB.getPontos() < 3 && cont < 5);
 		
 	}
 	

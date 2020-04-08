@@ -24,7 +24,7 @@ public class Time {
 		return pontos;
 	}
 
-	public synchronized void setPontos() {
+	public void setPontos() {
 		this.pontos ++;
 	}
 
