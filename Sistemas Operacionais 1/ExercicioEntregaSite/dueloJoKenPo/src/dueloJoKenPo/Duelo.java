@@ -26,7 +26,7 @@ public class Duelo implements Runnable{
 			
 			System.out.println("(" + timeA.getJogador(indiceJogador).getNome() + " " + timeA.getNome() + ") " + jogadaA + " x " + jogadaB + " (" + timeB.getJogador(indiceJogador).getNome() + " " + timeB.getNome() + ")");
 						
-			if(!jogadaA.equals(jogadaB)) {
+			if(!jogadaA.matches(jogadaB)) {
 				if((jogadaA + jogadaB).matches("pedratesoura") || (jogadaA + jogadaB).matches("tesourapapel") || (jogadaA + jogadaB).matches("papelpedra")) {
 					juiz.verifica(timeA, timeA.getJogador(indiceJogador), Thread.currentThread());
 					cont++;
