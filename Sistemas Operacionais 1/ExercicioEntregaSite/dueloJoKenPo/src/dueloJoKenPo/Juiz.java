@@ -2,10 +2,10 @@ package dueloJoKenPo;
 
 public class Juiz {
 
-	@SuppressWarnings("deprecation")
-	public synchronized void verifica(Time time, Jogador jogador, Thread thread) {
+	private int vencedor = 0;
 
-		int vencedor = 0;
+	@SuppressWarnings("deprecation")
+	public void verifica(Time time, Jogador jogador, Thread thread) {
 
 		if (vencedor == 0) {
 			jogador.setPontos();
