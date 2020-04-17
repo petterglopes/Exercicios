@@ -2,7 +2,7 @@ package triatlo;
 
 import java.util.concurrent.Semaphore;
 
-public class Vai {
+public class Largada {
 	
 	public static void main(String[] args) {
 		
