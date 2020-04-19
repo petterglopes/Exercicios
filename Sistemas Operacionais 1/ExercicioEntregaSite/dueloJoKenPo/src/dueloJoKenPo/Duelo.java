@@ -22,8 +22,8 @@ public class Duelo implements Runnable{
 
 		int cont = 0;
 		do {
-			timeA.getJogador(indiceJogador).jogada();
-			timeB.getJogador(indiceJogador).jogada();
+			timeA.getJogador(indiceJogador).joga();
+			timeB.getJogador(indiceJogador).joga();
 			
 			String jogadaA = timeA.getJogador(indiceJogador).getJogada();
 			String jogadaB = timeB.getJogador(indiceJogador).getJogada();
@@ -49,7 +49,5 @@ public class Duelo implements Runnable{
 				semaforo.release();
 			}
 		}while(timeA.getPontos() < 3 && timeB.getPontos() < 3 && cont < 5);
-		
 	}
-	
 }

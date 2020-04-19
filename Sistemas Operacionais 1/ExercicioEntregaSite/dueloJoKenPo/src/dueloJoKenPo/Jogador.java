@@ -4,6 +4,7 @@ public class Jogador {
 	private int pontos = 0;
 	private String nome;
 	private String jogada;
+	private String [] escolhasPossiveis = {"pedra", "papel", "tesoura"};
 	
 
 	public Jogador(String nome) {
@@ -20,15 +21,8 @@ public class Jogador {
 		return nome;
 	}
 	
-	public void jogada() {
-		int aleatorio = (int)(Math.random() * 3);
-		if(aleatorio == 0) {
-			this.jogada = "pedra";
-		}else if(aleatorio == 1) {
-			this.jogada = "papel";
-		}else{
-			this.jogada = "tesoura";
-		}
+	public void joga() {
+		this.jogada = escolhasPossiveis[(int)(Math.random() * 3)];
 	}
 
 	public String getJogada() {
