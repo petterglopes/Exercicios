@@ -15,24 +15,23 @@ public class Atleta implements Runnable, Comparable<Atleta> {
 		this.juiz = juiz;
 		this.pistolaTiroAoAlvo = pistolaTiroAoAlvo;
 		this.linhaDeChegada = linhaDeChegada;
-
 	}
 
 	@Override
 	public void run() {
-		corrida();
+		corre();
 		try {
 			pistolaTiroAoAlvo.acquire();
-			tiroAoAlvo();
+			atira();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {
 			pistolaTiroAoAlvo.release();
 		}
-		ciclismo();
+		correDeBicicleta();
 	}
 
-	private void corrida() {
+	private void corre() {
 
 		int distancia = 0;
 		int velocidade = (int) (20 + Math.random() * 6);
@@ -51,10 +50,9 @@ public class Atleta implements Runnable, Comparable<Atleta> {
 		}
 
 		System.out.println("O " + nome + " terminou a prova de corrida de " + distancia / 1000 + " Km.");
-
 	}
 
-	private void tiroAoAlvo() {
+	private void atira() {
 
 		for (int i = 0; i < 3; i++) {
 			try {
@@ -67,7 +65,7 @@ public class Atleta implements Runnable, Comparable<Atleta> {
 		System.out.println("O " + nome + " fez um total de " + pontos + " durante a prova de tiro ao alvo.");
 	}
 
-	private void ciclismo() {
+	private void correDeBicicleta() {
 
 		int distancia = 0;
 		int velocidade = (int) (30 + Math.random() * 11);
@@ -117,7 +115,5 @@ public class Atleta implements Runnable, Comparable<Atleta> {
 			return 1;
 		}
 		return 0;
-
 	}
-
 }
