@@ -16,5 +16,4 @@ public class Largada {
 			new Thread(new Atleta("Atleta " + i, juiz, pistolaTiroAoAlvo, linhaDeChegada)).start();
 		}
 	}
-
 }
