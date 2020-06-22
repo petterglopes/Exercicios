@@ -1,4 +1,0 @@
-bebida
-500.0
-pe de moleque
-10.0
