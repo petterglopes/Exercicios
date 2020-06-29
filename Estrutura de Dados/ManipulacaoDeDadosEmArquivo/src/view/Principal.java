@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
+import controller.OrdenacaoPorTroca;
 import controller.Producao;
 import controller.ProducaoController;
 
@@ -13,30 +15,36 @@ public class Principal {
 	public static void main(String[] args) throws IOException {
 		Producao producao = new Producao();
 		ProducaoController controller = new ProducaoController();
+		OrdenacaoPorTroca ordenacaoPorTroca = new OrdenacaoPorTroca();
 		
 		String path = "D:\\Usuários\\Petter\\OneDrive - Fatec Centro Paula Souza\\Disciplinas\\Estrutura de Dados\\ManipulacaoArquivo";
-		String arquivo = "entrada.txt";
+		String nomeArquivoEntrada = "entrada.txt";
+		String nomeArquivoSaida = "saida.txt";
 		
-		File arq = new File(path, arquivo);
 		
-		if(arq.exists())
-			arq.delete();
+		File arquivoEntrada = new File(path, nomeArquivoEntrada);
+		File arquivoSaida = new File(path, nomeArquivoSaida);
 		
-		controller.create(path, arquivo);
+		if(arquivoEntrada.exists())
+			arquivoEntrada.delete();
 		
-		controller.read(path, arquivo);
+		controller.create(path, nomeArquivoEntrada);
 		
-//		for(int i = 0; i < 5; i++) {
-//			producao.setId(BigInteger.valueOf(i + 1));
-//			producao.setProduto("Produto " + (i + 1));
-//			producao.setQuantidade((int)(100 + Math.random() * 901));
-//			producao.setDataProducao(LocalDate.now());
-//			producao.setHoraProducao(LocalTime.now());
-//			producao.setCustoProducao((int)(1000 + Math.random() * 9001));
-//			controller.insert(producao, path, arquivo);
-//		}
-//		
-//		controller.read(path, arquivo);
+//		controller.read(path, nomeArquivoEntrada);
+		
+		for(int i = 0; i < 5; i++) {
+			producao.setId(BigInteger.valueOf(i + 1));
+			producao.setProduto("Produto " + (i + 1));
+			producao.setQuantidade((int)(100 + Math.random() * 901));
+			producao.setDataProducao(LocalDate.now());
+			producao.setHoraProducao(LocalTime.now());
+			producao.setCustoProducao((int)(1000 + Math.random() * 9001));
+			controller.insert(producao, path, nomeArquivoEntrada);
+		}
+		
+		controller.read(path, nomeArquivoEntrada);
+		
+		ordenacaoPorTroca.createArquivoSaida(arquivoSaida, ordenacaoPorTroca.ordenaListaProducaoPorQuantidade(ordenacaoPorTroca.obtemListaDoArquivo(arquivoEntrada)));
 //		
 //		producao.setId(BigInteger.valueOf(6));
 //		producao.setProduto("Produto " + (6));

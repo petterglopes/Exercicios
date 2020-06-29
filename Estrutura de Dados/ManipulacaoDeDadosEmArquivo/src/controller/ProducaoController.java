@@ -13,8 +13,6 @@ import java.time.LocalTime;
 import java.util.LinkedList;
 import java.util.List;
 
-import javax.swing.JOptionPane;
-
 public class ProducaoController implements IObjetoController {
 
 	@Override
@@ -66,8 +64,7 @@ public class ProducaoController implements IObjetoController {
 			while (linha != null) {
 				linha = buffer.readLine();
 				if (linha != null) {
-					Producao producao2 = criaProducao(linha);
-					listaDeObjeto.add(producao2);
+					listaDeObjeto.add(criaProducao(linha));
 				}
 			}
 			buffer.close();
@@ -105,7 +102,6 @@ public class ProducaoController implements IObjetoController {
 			FileInputStream fluxo = new FileInputStream(arq);
 			InputStreamReader leitor = new InputStreamReader(fluxo);
 			BufferedReader buffer = new BufferedReader(leitor);
-//			buffer.readLine();
 			List<String> listaDeObjeto = new LinkedList<String>();
 			String linha = "";
 			while (linha != null) {
