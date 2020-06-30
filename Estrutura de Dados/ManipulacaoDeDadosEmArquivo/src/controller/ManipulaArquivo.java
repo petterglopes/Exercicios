@@ -16,16 +16,19 @@ import java.util.List;
 public class ManipulaArquivo {
 
 	public void createArquivo(File arquivo, List<Producao> lista) throws IOException {
-		String Cabecalho = "ID;Produto;quantidade;dataProducao;horaProducao;custoProducao;";
 		FileWriter fileWriter = new FileWriter(arquivo);
 		PrintWriter printWriter = new PrintWriter(fileWriter);
-		printWriter.write(Cabecalho + "\n");
+		printWriter.write(cabecalho() + "\n");
 		lista.forEach(itemProducao -> {
 			printWriter.write(converteProducaoParaString(itemProducao) + "\n");
 		});
 		printWriter.flush();
 		printWriter.close();
 		fileWriter.close();
+	}
+	
+	public String cabecalho() {
+		return "ID;Produto;quantidade;dataProducao;horaProducao;custoProducao;";
 	}
 	
 	public String converteProducaoParaString(Producao producao) {

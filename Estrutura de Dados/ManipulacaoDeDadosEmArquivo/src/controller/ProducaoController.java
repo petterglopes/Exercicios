@@ -17,12 +17,11 @@ public class ProducaoController implements IObjetoController {
 
 	public void insert(File arquivo, Producao producao) throws IOException {
 		String linha = manipulaArquivo.converteProducaoParaString(producao);
-
 		manipulaArquivo.insereNoArquivo(arquivo, linha);
 	}
 
 	@Override
-	public void update(Producao producao, File arquivo) throws IOException {
+	public void update(File arquivo, Producao producao) throws IOException {
 
 		List<Producao> listaProducao = manipulaArquivo.lerArquivo(arquivo);
 
@@ -32,15 +31,15 @@ public class ProducaoController implements IObjetoController {
 				break;
 			}
 		}
-
 		manipulaArquivo.createArquivo(arquivo, listaProducao);
-
 	}
 
 	@Override
 	public void read(File arquivo) throws IOException {
 
 		List<Producao> listaProducao = manipulaArquivo.lerArquivo(arquivo);
+		
+		System.out.println(manipulaArquivo.cabecalho().replace(";", " | "));
 
 		listaProducao.forEach(itemProducao -> {
 			System.out.println(itemProducao.toString());
