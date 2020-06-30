@@ -11,10 +11,12 @@ public class Producao {
 	private LocalDate dataProducao;
 	private LocalTime horaProducao;
 	private long custoProducao;
-	
-	public Producao() {}
 
-	public Producao(BigInteger id, String produto, int quantidade, LocalDate dataProducao, LocalTime horaProducao, long custoProducao) {
+	public Producao() {
+	}
+
+	public Producao(BigInteger id, String produto, int quantidade, LocalDate dataProducao, LocalTime horaProducao,
+			long custoProducao) {
 		this.setId(id);
 		this.produto = produto;
 		this.quantidade = quantidade;
@@ -70,5 +72,10 @@ public class Producao {
 	public void setId(BigInteger id) {
 		this.id = id;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "ID " + id + " Produto " + produto + " quantidade" + quantidade + " Data " + dataProducao + " hora" + horaProducao + " R$" + custoProducao + ",00";
+	}
+
 }
