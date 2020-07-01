@@ -18,21 +18,17 @@ public class Principal {
 		ManipulaArquivo manipulaArquivo = new ManipulaArquivo();
 		
 		String path = "D:\\Usuários\\Petter\\OneDrive - Fatec Centro Paula Souza\\Disciplinas\\Estrutura de Dados\\ManipulacaoArquivo";
-		String nomeArquivoEntrada = "entrada.txt";
-		String nomeArquivoSaidaBubbleSort = "saidaBubbleSort.txt";
-		String nomeArquivoSaidaMergeSort = "saidaMergeSort.txt";
 		
-		
-		File arquivoEntrada = new File(path, nomeArquivoEntrada);
-		File arquivoSaidaBubbleSort = new File(path, nomeArquivoSaidaBubbleSort);
-		File arquivoSaidaMergeSort = new File(path, nomeArquivoSaidaMergeSort);
+		File arquivoEntrada = new File(path, "entrada.txt");
+		File arquivoSaidaBubbleSort = new File(path, "saidaBubbleSort.txt");
+		File arquivoSaidaMergeSort = new File(path, "saidaMergeSort.txt");
 		
 		if(arquivoEntrada.exists())
 			arquivoEntrada.delete();
 		
 		controller.create(arquivoEntrada);
 		
-		for(int i = 0; i < 5; i++) {
+		for(int i = 0; i < 40; i++) {
 			producao.setId(BigInteger.valueOf(i + 1));
 			producao.setProduto("Produto " + (i + 1));
 			producao.setQuantidade((int)(100 + Math.random() * 901));
@@ -44,24 +40,8 @@ public class Principal {
 		
 		System.out.println("Primeiro inserção de dados no arquivo\n");
 		
-		controller.read(arquivoEntrada);
-		
-		List<Producao> listaProducao = manipulaArquivo.lerArquivo(arquivoEntrada);
-		
-		for(int i = 0; i < 5; i++) {
-			producao.setId(BigInteger.valueOf(i + 6));
-			producao.setProduto("Produto " + (i + 6));
-			producao.setQuantidade((int)(100 + Math.random() * 901));
-			producao.setDataProducao(LocalDate.now());
-			producao.setHoraProducao(LocalTime.now());
-			producao.setCustoProducao((int)(1000 + Math.random() * 9001));
-			controller.insert(arquivoEntrada, producao);
-		}
-		
-		System.out.println("\nSegunda inserção de dados no arquivo\n");
-		
-		controller.read(arquivoEntrada);
-		
+		controller.read(arquivoEntrada);		
+				
 		System.out.println("\nPrimeiro update de dados no arquivo\n");
 		
 		producao.setId(BigInteger.valueOf(10));
@@ -81,6 +61,8 @@ public class Principal {
 		controller.read(arquivoEntrada);
 		
 		System.out.println("\n\n\nLista ordenado pelo metodo Bubble Sort\n");
+		
+		List<Producao> listaProducao = manipulaArquivo.lerArquivo(arquivoEntrada);
 		
 		listaProducao = manipulaArquivo.lerArquivo(arquivoEntrada);
 		
@@ -102,7 +84,7 @@ public class Principal {
 		
 		listaProducao = manipulaArquivo.lerArquivo(arquivoEntrada);
 		
-		Ordenacao.bubbleSort(listaProducao);
+		Ordenacao.iniciaMerge(listaProducao);
 		
 		controller.create(arquivoSaidaMergeSort);
 		
