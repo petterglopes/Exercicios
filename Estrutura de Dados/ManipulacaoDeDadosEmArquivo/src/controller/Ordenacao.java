@@ -3,6 +3,8 @@ package controller;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 public class Ordenacao {
 
 	public static void bubbleSort(List<Producao> lista) {
@@ -18,7 +20,7 @@ public class Ordenacao {
 		}
 	}
 
-	public static void iniciaMerge(List<Producao> lista) {
+	private static List<Producao> listaAux(List<Producao> lista) {
 		List<Producao> listaAux = new LinkedList<Producao>();
 
 		for (int i = 0; i < lista.size(); i++) {
@@ -31,14 +33,19 @@ public class Ordenacao {
 			producao.setCustoProducao(0);
 			listaAux.add(producao);
 		}
-		mergeSort(lista, listaAux, 0, lista.size() - 1);
+
+		return listaAux;
 	}
 
-	private static void mergeSort(List<Producao> l1, List<Producao> l2, int init, int fim) {
+	public static void iniciaMergeSort(List<Producao> lista) {
+		iniciaMergeSort(lista, listaAux(lista), 0, lista.size() - 1);
+	}
+
+	private static void iniciaMergeSort(List<Producao> l1, List<Producao> l2, int init, int fim) {
 		if (init < fim) {
 			int meio = (init + fim) / 2;
-			mergeSort(l1, l2, init, meio);
-			mergeSort(l1, l2, meio + 1, fim);
+			iniciaMergeSort(l1, l2, init, meio);
+			iniciaMergeSort(l1, l2, meio + 1, fim);
 			intercalar(l1, l2, init, meio, fim);
 		}
 	}
@@ -63,4 +70,72 @@ public class Ordenacao {
 			}
 		}
 	}
+
+	public static void insertionSort(List<Producao> lista) {
+		iniciaInsertionSort(lista, listaAux(lista));
+	}
+
+	private static void iniciaInsertionSort(List<Producao> lista, List<Producao> listaAux) {
+		int j = 0;
+		for (int i = 1; i < lista.size(); i++) {
+			listaAux.set(i, lista.get(i));
+			j = i - 1;
+
+			while (j >= 0 && listaAux.get(i).getQuantidade() < lista.get(j).getQuantidade()) {
+				lista.set(j + 1, lista.get(j));
+				j--;
+			}
+			lista.set(j + 1, listaAux.get(i));
+		}
+	}
+
+	private static Producao[] tabelaHash(List<Producao> lista) {
+		Producao[] hashProducao = new Producao[lista.size()];
+
+		lista.forEach(itemProducao -> {
+			int numChar = itemProducao.getProduto().toLowerCase().codePointAt(0) - 97;
+			if (hashProducao[numChar] == null) {
+				hashProducao[numChar] = itemProducao;
+			} else {
+				boolean posicaoVazia = false;
+				int proximo = numChar;
+				int anterio = numChar;
+				while (posicaoVazia) {
+					if (hashProducao[proximo++] == null) {
+						hashProducao[numChar] = itemProducao;
+						posicaoVazia = true;
+					} else if (hashProducao[anterio--] == null) {
+						hashProducao[numChar] = itemProducao;
+						posicaoVazia = true;
+					}
+				}
+			}
+		});
+
+		return hashProducao;
+	}
+
+//	private static List<Producao>[] tabelaHashListaEncadeada(List<Producao> lista) {
+//		List<Producao>[] hashListaProducao = new LinkedList[26];
+//
+//		for (Producao itemProducao : lista) {
+//			int numChar = itemProducao.getProduto().toLowerCase().codePointAt(0) - 97;
+//			int posicaoItem = 0;
+//			if (hashListaProducao[numChar].isEmpty()) {
+//				hashListaProducao[numChar].add(itemProducao);
+//			} else if (hashListaProducao[numChar].get(posicaoItem).getProduto().equals(itemProducao.getProduto())) {
+//				JOptionPane.showMessageDialog(null, "Produto já existente");
+//			} else {
+//				boolean adicionadoNaLista = false;
+//				while (adicionadoNaLista) {
+//					int index = 0;
+//					if (hashListaProducao[numChar].get(posicaoItem).getProduto().toLowerCase()
+//							.codePointAt(index) == itemProducao.getProduto().toLowerCase().codePointAt(index)) {
+//
+//					}
+//				}
+//			}
+//		}
+//		return hashListaProducao;
+//	}
 }

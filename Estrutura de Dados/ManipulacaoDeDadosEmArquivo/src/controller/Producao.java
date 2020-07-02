@@ -75,7 +75,8 @@ public class Producao {
 
 	@Override
 	public String toString() {
-		return "ID: " + id + " Produto: " + produto + " quantidade: " + quantidade + " Data: " + dataProducao + " hora: " + horaProducao + " R$" + custoProducao + ",00";
+		return "ID: " + id + " Produto: " + produto + " quantidade: " + quantidade + " Data: " + dataProducao
+				+ " hora: " + horaProducao + " R$" + custoProducao + ",00";
 	}
 
 }
